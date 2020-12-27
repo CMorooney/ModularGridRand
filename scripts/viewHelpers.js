@@ -1,6 +1,22 @@
 var loadingOverlayId = "mGridRandomLoadingOverlay";
 
-function showLoadingOverlay(text){
+function createDummyNavItem(text, clickHandler){
+  let dummyNavItem = document.createElement("li");
+
+  let dummyLinkElement = document.createElement("a");
+  dummyLinkElement.href = "#";
+  dummyLinkElement.title = "Random";
+  dummyLinkElement.onclick = clickHandler;
+
+  let textNode = document.createTextNode(text);
+  dummyLinkElement.appendChild(textNode);
+
+  dummyNavItem.appendChild(dummyLinkElement);
+
+  return dummyNavItem;
+}
+
+function showLoadingOverlay(){
   if (!getCurrentLoadingOverlay()){
       let div = document.createElement("div");
       div.id = loadingOverlayId;
