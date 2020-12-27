@@ -6,12 +6,14 @@ initialize();
 
 function initialize() {
     let btn = document.createElement("button");
-    btn.classList.add('fab');
+    btn.id = "mGridRandomFab";
     btn.onclick = rollTheDie;
     document.body.appendChild(btn);
 }
 
 function rollTheDie() {
+  showLoadingOverlay();
+
   //we are requesting the root "all" modules page in order
   //to be able to read how many 'pages' of modules there are,
   //which will allow us to generate a random page, then load
@@ -45,6 +47,8 @@ function handleRandomPageReturned(page){
 }
 
 function handleAllModulesPageRequestError(status, content){
+  removeLoadingOverlay();
+
   handleUnexpectedError(
     `error requesting document from ${allModulesDocumentLocation}
     \n${status}\n${content}`
@@ -52,6 +56,8 @@ function handleAllModulesPageRequestError(status, content){
 }
 
 function handleRandomPageRequestError(url, status, content){
+  removeLoadingOverlay();
+
   handleUnexpectedError(
     `error requesting random page from ${url}
     \n${status}\n${content}`

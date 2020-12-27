@@ -14,7 +14,12 @@
     {
       "matches": [ "*://*.modulargrid.net/*" ],
       "css": ["style/style.css"],
-      "js": ["scripts/requests.js", "scripts/scrape.js", "scripts/embedded.js" ]
+      "js": [
+        "scripts/requests.js",
+        "scripts/scrape.js",
+        "scripts/viewHelpers.js",
+        "scripts/embedded.js"
+      ]
     }
   ]
 }
