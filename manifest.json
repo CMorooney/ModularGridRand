@@ -12,7 +12,7 @@
   ],
   "content_scripts": [
     {
-      "matches": [ "*://*.modulargrid.net/*" ],
+      "matches": [ "*://*.modulargrid.net/e/*" ],
       "css": ["style/style.css"],
       "js": [
         "scripts/requests.js",
