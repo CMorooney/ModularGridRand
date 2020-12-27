@@ -1,3 +1,13 @@
+function getNavUL(){
+    let allNavs = document.querySelectorAll(".nav");
+    if(allNavs.length < 2) {
+        handleUnexpectedError("couldn't find the right ul to inject random button into");
+        return null
+    }
+
+    return allNavs[1];//expecting it to be the second one found on the page
+}
+
 function getRandomModuleLinkFromPage(page){
     let linkCells = page.querySelectorAll('.table-striped td:last-child a');
     if (linkCells.length <= 0){

@@ -5,10 +5,13 @@ var allModulesDocumentLocation = "/e/modules";
 initialize();
 
 function initialize() {
-    let btn = document.createElement("button");
-    btn.id = "mGridRandomFab";
-    btn.onclick = rollTheDie;
-    document.body.appendChild(btn);
+    var navUL = getNavUL();
+
+    if(navUL){
+      navUL.appendChild(createDummyNavItem("Random", rollTheDie));
+    } else {
+      handleUnexpectedError("couldn't find the navigation UL to inject our button into :(");
+    }
 }
 
 function rollTheDie() {
