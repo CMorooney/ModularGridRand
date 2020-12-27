@@ -1,22 +1,45 @@
-.fab {
-    width: 70px;
-    height: 70px;
-    background-color: black;
-    border-radius: 50%;
-    box-shadow: 0 6px 10px 0 #666;
-    transition: all 0.1s ease-in-out;
-  
-    font-size: 50px;
-    color: black;
-    text-align: center;
-    line-height: 70px;
-  
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
- }
-  
- .fab:hover {
-    box-shadow: 0 6px 14px 0 #666;
-    transform: scale(1.05);
- }
+#mGridRandomFab {
+   width: 70px;
+   height: 70px;
+   background-color: black;
+   border-radius: 50%;
+   box-shadow: 0 6px 10px 0 #666;
+   transition: all 0.1s ease-in-out;
+
+   font-size: 50px;
+   color: black;
+   text-align: center;
+   line-height: 70px;
+
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+}
+
+#mGridRandomFab:hover {
+   box-shadow: 0 6px 14px 0 #666;
+   transform: scale(1.05);
+}
+
+#mGridRandomLoadingOverlay {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0,0,0,0.5);
+   z-index: 2;
+   cursor: pointer;
+}
+
+#mGridRandomLoadingOverlay h1 {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   color: white;
+   margin: 0;
+}
