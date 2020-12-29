@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "name": "ModularGrid Random",
   "description": "Adds random button to Eurorack browsing in ModularGrid",
-  "permissions": [ "activeTab" ],
   "content_scripts": [
     {
       "matches": [ "*://*.modulargrid.net/e/*" ],
